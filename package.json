@@ -11,11 +11,10 @@
     "build:watch": "tsc -w",
     "synth": "cdk synth",
     "deploy": "npm run deploy:dev",
-    "deploy:dev": "CDK_ENV=development cdk deploy -v && cd ./client && npm run build && cd ../ && npm run deploy:client",
+    "deploy:dev": "CDK_ENV=development cdk deploy -v ",
     "deploy:stage": "CDK_ENV=staging cdk deploy -v",
     "deploy:prod": "CDK_ENV=production cdk deploy -v",
     "remove": "cdk destroy",
-    "deploy:client": "aws s3 cp ./client/build s3://rb-cognito-apr-22/ --recursive",
     "test": "jest"
   },
   "keywords": [
