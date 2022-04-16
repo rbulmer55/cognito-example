@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 import "source-map-support/register";
 import * as cdk from "@aws-cdk/core";
-import { ClientStack } from "../client/client-stack";
+import { APIStack } from "../api/api-stack";
 
 const app = new cdk.App();
-new ClientStack(app, "CognitoClientStack", {
+new APIStack(app, "CognitoAPIStack", {
   env: { region: "eu-west-1" },
   /* If you don't specify 'env', this stack will be environment-agnostic.
    * Account/Region-dependent features and context lookups will not work,
